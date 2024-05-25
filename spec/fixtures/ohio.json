@@ -1,0 +1,17 @@
+{
+  "metadata": { "page": 0, "total": 42, "per_page": 20 },
+  "results": [
+    {
+      "school.name": "Choffin Career  and Technical Center",
+      "id": 201803,
+      "location.lat": 41.100847,
+      "location.lon": -80.644393
+    },
+    {
+      "school.name": "Northeast Ohio Medical University",
+      "id": 204477,
+      "location.lat": 41.102919,
+      "location.lon": -81.245302
+    }
+  ]
+}

@@ -40,5 +40,6 @@ module Opencollege
     config.generators.system_tests = nil
 
     config.open_data_api_key = ENV["OPEN_DATA_API_KEY"]
+    config.google_maps_api_key = ENV["GOOGLE_API_KEY"]
   end
 end

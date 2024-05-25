@@ -1,0 +1,15 @@
+<%= turbo_frame_tag "colleges" do %>
+  <% if noresults %>
+    <p>No results found</p>
+  <% end %>
+
+  <%= render colleges %>
+  
+  <% if metadata.present? %>
+    <p> Total results: <%= metadata["total"] %></p>     
+  <% end %>
+  
+  <% if next_page %>
+    <button onclick="nextPage()">Next page</button>
+  <% end %>
+<% end %>

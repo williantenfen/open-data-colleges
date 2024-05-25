@@ -1,0 +1,25 @@
+<% content_for :head do %>
+  <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.configuration.google_maps_api_key}&callback=initMap", defer: true %>
+<% end %>
+
+<h1>Colleges</h1>
+<div>
+  <%= form_with(url: colleges_path, method: "GET", data: { turbo_frame: "colleges" }) do |form| %>
+    <%= form.label :query, "Search by name:" %>
+    <%= form.text_field :query %>
+    <%= form.hidden_field :page, name: 'page', value: 0 %>
+    <%= form.submit 'Search', name: nil %>
+  <% end %>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;">
+  <div style="width:70%;">
+    <%= render "colleges", colleges: @colleges, noresults: @noresults, metadata: @metadata, next_page: @next_page %>
+  </div>
+    
+  <div style="width:30%;">
+    <div id="map" style="width:100%;height:calc(100vh - 116px);;"></div>
+  </div>
+</div>
+
+
