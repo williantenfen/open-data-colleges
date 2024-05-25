@@ -7,3 +7,8 @@
 - export OPEN_DATA_API_KEY=your-key
 
 - export GOOGLE_API_KEY=you-key
+
+## Tests
+
+- $ bundle exec rspec spec/
+- $ bundle exec rake
